@@ -120,19 +120,23 @@ fadeElements.forEach(el => fadeObserver.observe(el));
 document.addEventListener('DOMContentLoaded', () => {
     const heroElements = document.querySelectorAll('.bubbly-reveal');
 
-    // Set all elements hidden first (synchronously before paint)
+    // Set all elements hidden first without any transition
     heroElements.forEach(el => {
+        el.style.transition = 'none';
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
     });
 
     // Stagger each element into view with its own independent timeout
     heroElements.forEach((el, index) => {
+        // Trigger a reflow to ensure the hidden state is painted
+        void el.offsetHeight;
+
         setTimeout(() => {
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
-        }, 300 + index * 200);
+        }, 150 + index * 200);
     });
 
     renderGallery('all');
