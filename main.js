@@ -119,18 +119,20 @@ fadeElements.forEach(el => fadeObserver.observe(el));
 // --- BUBBLY REVEAL FOR HERO ---
 document.addEventListener('DOMContentLoaded', () => {
     const heroElements = document.querySelectorAll('.bubbly-reveal');
-    heroElements.forEach((el, index) => {
+
+    // Set all elements hidden first (synchronously before paint)
+    heroElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = `all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15 + 0.2}s`;
+        el.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    });
 
-        // Trigger reflow
-        void el.offsetWidth;
-
+    // Stagger each element into view with its own independent timeout
+    heroElements.forEach((el, index) => {
         setTimeout(() => {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
-        }, 100);
+        }, 300 + index * 200);
     });
 
     renderGallery('all');
