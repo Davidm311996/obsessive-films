@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsessive Films | Global Photography & Videography</title>
+    <meta name="description"
+        content="Award-winning global photography and videography. Breathtaking cinematic visuals.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Obsessive<span>Films</span></a>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+            <button id="theme-toggle" class="btn-theme" aria-label="Toggle Theme">
+                <svg id="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                    fill="none">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+                <svg id="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                    fill="none" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="bubbly-reveal">Capturing Your <br> <span class="cinematic-text">Love Story</span></h1>
+                <p class="bubbly-reveal">High-end wedding photography & cinematic videography. We specialise in weddings
+                    but capture all moments with breathtaking emotion and stunning visuals.</p>
+                <div class="hero-ctas bubbly-reveal">
+                    <a href="#work" class="btn btn-secondary">Explore Work</a>
+                    <a href="#booking" class="btn btn-primary">Let's Create</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Grid Work Section -->
+        <section id="work" class="work-section">
+            <div class="section-header fade-up">
+                <h2>Selected Work</h2>
+                <p>Moments frozen in time, stories told in motion.</p>
+            </div>
+
+            <div class="bubbly-gallery fade-up">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="photo">Photography</button>
+                    <button class="filter-btn" data-filter="video">Videography</button>
+                </div>
+
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Gallery items will be injected by main.js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="section-header fade-up">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card bubbly-card fade-up">
+                    <div class="card-line"></div>
+                    <div class="card-number">01 //</div>
+                    <h3>Wedding Photography</h3>
+                    <p>Our specialty. High-end, emotive photography capturing every detail of your special day.</p>
+                </div>
+                <div class="service-card bubbly-card fade-up delay-1">
+                    <div class="card-line"></div>
+                    <div class="card-number">02 //</div>
+                    <h3>Wedding Videography</h3>
+                    <p>Cinematic films that tell the complete story of your wedding with breathtaking emotion.</p>
+                </div>
+                <div class="service-card bubbly-card fade-up delay-2">
+                    <div class="card-line"></div>
+                    <div class="card-number">03 //</div>
+                    <h3>Commercial & Events</h3>
+                    <p>Beyond weddings, we offer premium coverage for lifestyle shoots, brand identity, and global
+                        events.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <div class="about-image-wrapper fade-up">
+                    <img src="https://images.unsplash.com/photo-1536555543717-b6f7f6fcfaf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Photographer" class="about-image">
+                    <div class="floating-badge bubbly-card">
+                        <span class="stat">5</span>
+                        <span class="label">Years Exp.</span>
+                    </div>
+                </div>
+                <div class="about-text fade-up delay-1">
+                    <h2>Hi, we are the eyes behind the lens.</h2>
+                    <p>We specialise in crafting visual narratives that resonate. Combining cinematic moods with modern,
+                        minimalist aesthetics, our goal is to make every shot unforgettable.</p>
+                    <p>Based anywhere you need us. We travel the globe hunting for the perfect light and the ultimate
+                        shot.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking/CTA Section -->
+        <section id="booking" class="cta-section">
+            <div class="cta-card bubbly-card fade-up">
+                <h2>Ready to create magic?</h2>
+                <p>Spots are limited. Let’s discuss your project and make it happen.</p>
+                <form id="booking-form" class="bubbly-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" required>
+                            <option value="">Select Service...</option>
+                            <option value="wedding-photo">Wedding Photography</option>
+                            <option value="wedding-video">Wedding Videography</option>
+                            <option value="wedding-both">Wedding (Both)</option>
+                            <option value="other">Other Event / Commercial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Send Request ✨</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fade-up">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo logo">Obsessive<span>Films</span></div>
+                <p>Award-winning cinematic videography & high-end wedding photography capturing breathtaking emotion
+                    globally.</p>
+                <a href="mailto:hello@obsessivefilms.com" class="footer-email">hello@obsessivefilms.com</a>
+            </div>
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="#hero">Home</a>
+                <a href="#work">Selected Work</a>
+                <a href="#about">Our Story</a>
+                <a href="#booking">Book Now</a>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <a href="#services">Wedding Photography</a>
+                <a href="#services">Wedding Videography</a>
+                <a href="#services">Commercial Shoots</a>
+                <a href="#services">Elopements</a>
+            </div>
+            <div class="footer-links">
+                <h3>Socials & Legal</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">IG.</a>
+                    <a href="#" aria-label="Vimeo">VI.</a>
+                    <a href="#" aria-label="YouTube">YT.</a>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Obsessive Films. All rights reserved.</p>
+            <p class="designer-credit">Designed dynamically.</p>
+        </div>
+    </footer>
+
+    <!-- Overlay for Bubbly Theme Transition -->
+    <div id="theme-transition-overlay" class="theme-overlay"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
